@@ -23,6 +23,7 @@ export function createNonInteractiveUI(): CommandContext['ui'] {
     toggleCorgiMode: () => {},
     toggleVimEnabled: async () => false,
     setGeminiMdFileCount: (_count) => {},
+    setSystemPromptPreset: (_preset) => {},
     reloadCommands: () => {},
     extensionsUpdateState: new Map(),
     dispatchExtensionStateUpdate: (_action: ExtensionUpdateAction) => {},

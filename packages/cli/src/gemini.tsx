@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import './patches/punycode-shim.js';
+
 import type { Config } from '@ai-masters-community/qwen-code-core';
 import {
   AuthType,
@@ -59,6 +61,7 @@ import { getUserStartupWarnings } from './utils/userStartupWarnings.js';
 import { getCliVersion } from './utils/version.js';
 import { computeWindowTitle } from './utils/windowTitle.js';
 import { validateNonInteractiveAuth } from './validateNonInterActiveAuth.js';
+import './patches/punycode-shim.js';
 
 export function validateDnsResolutionOrder(
   order: string | undefined,

@@ -119,12 +119,12 @@ function findImports(
     const importPath = content.slice(i + 1, j);
 
     // Basic validation (starts with ./ or / or letter)
-    if (
-      importPath.length > 0 &&
-      (importPath[0] === '.' ||
-        importPath[0] === '/' ||
-        isLetter(importPath[0]))
-    ) {
+    const isSupportedImport =
+      importPath.startsWith('./') ||
+      importPath.startsWith('../') ||
+      importPath.startsWith('/');
+
+    if (importPath.length > 0 && isSupportedImport) {
       imports.push({
         start: i,
         _end: j,
@@ -140,14 +140,6 @@ function findImports(
 
 function isWhitespace(char: string): boolean {
   return char === ' ' || char === '\t' || char === '\n' || char === '\r';
-}
-
-function isLetter(char: string): boolean {
-  const code = char.charCodeAt(0);
-  return (
-    (code >= 65 && code <= 90) || // A-Z
-    (code >= 97 && code <= 122)
-  ); // a-z
 }
 
 function findCodeRegions(content: string): Array<[number, number]> {

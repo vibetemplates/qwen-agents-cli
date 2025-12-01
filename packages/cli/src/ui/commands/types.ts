@@ -68,6 +68,8 @@ export interface CommandContext {
     toggleCorgiMode: () => void;
     toggleVimEnabled: () => Promise<boolean>;
     setGeminiMdFileCount: (count: number) => void;
+    /** Updates the visible system prompt preset label (from /sp). */
+    setSystemPromptPreset?: (preset: string | null) => void;
     reloadCommands: () => void;
     extensionsUpdateState: Map<string, ExtensionUpdateStatus>;
     dispatchExtensionStateUpdate: (action: ExtensionUpdateAction) => void;
