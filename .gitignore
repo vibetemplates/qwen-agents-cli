@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Lockfile
+package-lock.json
+
+# Build artifacts
+dist/
+packages/*/dist/
