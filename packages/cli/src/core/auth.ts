@@ -10,7 +10,7 @@ import {
   getErrorMessage,
   logAuth,
   AuthEvent,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 
 /**
  * Handles the initial authentication flow.

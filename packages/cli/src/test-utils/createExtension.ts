@@ -13,7 +13,7 @@ import {
 import {
   type MCPServerConfig,
   type ExtensionInstallMetadata,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 
 export function createExtension({
   extensionsDir = 'extensions-dir',

@@ -10,7 +10,7 @@ import type { WizardStepProps } from '../types.js';
 import type {
   SubagentManager,
   SubagentConfig,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { theme } from '../../../semantic-colors.js';
 import { shouldShowColor, getColorForDisplay } from '../utils.js';
 import { useLaunchEditor } from '../../../hooks/useLaunchEditor.js';

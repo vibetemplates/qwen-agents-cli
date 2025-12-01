@@ -20,7 +20,7 @@ import {
   makeFakeConfig,
   type GeminiClient,
   type SubagentManager,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import type { LoadedSettings } from '../config/settings.js';
 import type { InitializationResult } from '../core/initializer.js';
 import { useQuotaAndFallback } from './hooks/useQuotaAndFallback.js';
@@ -114,7 +114,7 @@ import { useLogger } from './hooks/useLogger.js';
 import { useLoadingIndicator } from './hooks/useLoadingIndicator.js';
 import { measureElement } from 'ink';
 import { useTerminalSize } from './hooks/useTerminalSize.js';
-import { ShellExecutionService } from '@ai-masters-community/qwen-agents-code-core';
+import { ShellExecutionService } from '@ai-masters-community/qwen-code-core';
 
 describe('AppContainer State Management', () => {
   let mockConfig: Config;

@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import type { MCPServerConfig } from '@ai-masters-community/qwen-agents-code-core';
-import { MCPServerStatus } from '@ai-masters-community/qwen-agents-code-core';
+import type { MCPServerConfig } from '@ai-masters-community/qwen-code-core';
+import { MCPServerStatus } from '@ai-masters-community/qwen-code-core';
 import { Box, Text } from 'ink';
 import type React from 'react';
 import { theme } from '../../semantic-colors.js';

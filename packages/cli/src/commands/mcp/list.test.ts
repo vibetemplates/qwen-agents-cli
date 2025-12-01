@@ -8,7 +8,7 @@ import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { listMcpServers } from './list.js';
 import { loadSettings } from '../../config/settings.js';
 import { ExtensionStorage, loadExtensions } from '../../config/extension.js';
-import { createTransport } from '@ai-masters-community/qwen-agents-code-core';
+import { createTransport } from '@ai-masters-community/qwen-code-core';
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 
 vi.mock('../../config/settings.js', () => ({
@@ -20,7 +20,7 @@ vi.mock('../../config/extension.js', () => ({
     getUserExtensionsDir: vi.fn(),
   },
 }));
-vi.mock('@ai-masters-community/qwen-agents-code-core', () => ({
+vi.mock('@ai-masters-community/qwen-code-core', () => ({
   createTransport: vi.fn(),
   MCPServerStatus: {
     CONNECTED: 'CONNECTED',

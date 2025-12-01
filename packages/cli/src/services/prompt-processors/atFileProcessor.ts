@@ -7,7 +7,7 @@
 import {
   flatMapTextParts,
   readPathFromWorkspace,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import type { CommandContext } from '../../ui/commands/types.js';
 import { MessageType } from '../../ui/types.js';
 import {

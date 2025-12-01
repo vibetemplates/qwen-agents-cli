@@ -16,7 +16,7 @@ import type { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import type {
   ToolCallRequestInfo,
   MCPServerConfig,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import type { PermissionSuggestion } from '../../types.js';
 
 /**

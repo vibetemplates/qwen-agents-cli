@@ -90,23 +90,23 @@ if (!argv.s) {
   execSync('npm run build --workspaces', { stdio: 'inherit' });
 }
 
-console.log('packing @ai-masters-community/qwen-agents-code ...');
+console.log('packing @qwen-code/qwen-code ...');
 const cliPackageDir = join('packages', 'cli');
 rmSync(join(cliPackageDir, 'dist', 'qwen-code-*.tgz'), { force: true });
 execSync(
-  `npm pack -w @ai-masters-community/qwen-agents-code --pack-destination ./packages/cli/dist`,
+  `npm pack -w @qwen-code/qwen-code --pack-destination ./packages/cli/dist`,
   {
     stdio: 'ignore',
   },
 );
 
-console.log('packing @ai-masters-community/qwen-agents-code-core ...');
+console.log('packing @qwen-code/qwen-code-core ...');
 const corePackageDir = join('packages', 'core');
 rmSync(join(corePackageDir, 'dist', 'qwen-code-core-*.tgz'), {
   force: true,
 });
 execSync(
-  `npm pack -w @ai-masters-community/qwen-agents-code-core --pack-destination ./packages/core/dist`,
+  `npm pack -w @qwen-code/qwen-code-core --pack-destination ./packages/core/dist`,
   { stdio: 'ignore' },
 );
 

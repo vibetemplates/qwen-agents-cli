@@ -6,7 +6,7 @@
 
 import { Box, Text } from 'ink';
 import { Colors } from '../colors.js';
-import { type ProjectSummaryInfo } from '@ai-masters-community/qwen-agents-code-core';
+import { type ProjectSummaryInfo } from '@ai-masters-community/qwen-code-core';
 import {
   RadioButtonSelect,
   type RadioSelectItem,

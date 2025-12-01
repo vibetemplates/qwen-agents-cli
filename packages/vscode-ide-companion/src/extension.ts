@@ -13,7 +13,7 @@ import {
   detectIdeFromEnv,
   IDE_DEFINITIONS,
   type IdeInfo,
-} from '@ai-masters-community/qwen-agents-code-core/src/ide/detect-ide.js';
+} from '@ai-masters-community/qwen-code-core/src/ide/detect-ide.js';
 
 const CLI_IDE_COMPANION_IDENTIFIER = 'qwenlm.qwen-code-vscode-ide-companion';
 const INFO_MESSAGE_SHOWN_KEY = 'qwenCodeInfoMessageShown';

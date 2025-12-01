@@ -7,7 +7,7 @@
 import fs from 'node:fs/promises';
 import * as os from 'node:os';
 import path from 'node:path';
-import { canUseRipgrep } from '@ai-masters-community/qwen-agents-code-core';
+import { canUseRipgrep } from '@ai-masters-community/qwen-code-core';
 
 type WarningCheckOptions = {
   workspaceRoot: string;

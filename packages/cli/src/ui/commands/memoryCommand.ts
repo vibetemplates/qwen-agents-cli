@@ -8,7 +8,7 @@ import {
   getErrorMessage,
   loadServerHierarchicalMemory,
   QWEN_DIR,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import path from 'node:path';
 import os from 'os';
 import fs from 'fs/promises';

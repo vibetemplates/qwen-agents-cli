@@ -6,7 +6,7 @@
 
 import type { ICommandLoader } from './types.js';
 import type { SlashCommand } from '../ui/commands/types.js';
-import type { Config } from '@ai-masters-community/qwen-agents-code-core';
+import type { Config } from '@ai-masters-community/qwen-code-core';
 import { aboutCommand } from '../ui/commands/aboutCommand.js';
 import { agentsCommand } from '../ui/commands/agentsCommand.js';
 import { approvalModeCommand } from '../ui/commands/approvalModeCommand.js';
@@ -15,6 +15,7 @@ import { bugCommand } from '../ui/commands/bugCommand.js';
 import { chatCommand } from '../ui/commands/chatCommand.js';
 import { clearCommand } from '../ui/commands/clearCommand.js';
 import { compressCommand } from '../ui/commands/compressCommand.js';
+import { openaiProfileCommand } from '../ui/commands/openaiProfileCommand.js';
 import { copyCommand } from '../ui/commands/copyCommand.js';
 import { corgiCommand } from '../ui/commands/corgiCommand.js';
 import { docsCommand } from '../ui/commands/docsCommand.js';
@@ -66,6 +67,7 @@ export class BuiltinCommandLoader implements ICommandLoader {
       chatCommand,
       clearCommand,
       compressCommand,
+      openaiProfileCommand,
       copyCommand,
       corgiCommand,
       docsCommand,

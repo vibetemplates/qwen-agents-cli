@@ -166,8 +166,8 @@ This document outlines the technologies used in the Qwen Code project.
 ## Package Structure
 
 ```
-@ai-masters-community/qwen-agents-code          # CLI package (React/Ink UI)
-@ai-masters-community/qwen-agents-code-core     # Core backend (API, tools, services)
+@qwen-code/qwen-code          # CLI package (React/Ink UI)
+@qwen-code/qwen-code-core     # Core backend (API, tools, services)
 qwen-code-vscode-ide-companion # VS Code extension
-@ai-masters-community/qwen-agents-code-test-utils # Shared test utilities
+@qwen-code/qwen-code-test-utils # Shared test utilities
 ```

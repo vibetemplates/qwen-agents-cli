@@ -18,7 +18,7 @@ import type {
   SubAgentApprovalRequestEvent,
   AnyDeclarativeTool,
   AnyToolInvocation,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import {
   AuthType,
   clearCachedCredentialFile,
@@ -40,7 +40,7 @@ import {
   Kind,
   TodoWriteTool,
   UserPromptEvent,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import * as acp from './acp.js';
 import { AcpFileSystemService } from './fileSystemService.js';
 import { Readable, Writable } from 'node:stream';

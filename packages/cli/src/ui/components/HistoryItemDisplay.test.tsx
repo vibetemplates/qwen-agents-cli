@@ -12,7 +12,7 @@ import { SessionStatsProvider } from '../contexts/SessionContext.js';
 import type {
   Config,
   ToolExecuteConfirmationDetails,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { ToolGroupMessage } from './messages/ToolGroupMessage.js';
 import { renderWithProviders } from '../../test-utils/render.js';
 

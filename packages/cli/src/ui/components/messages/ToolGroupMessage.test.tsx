@@ -14,7 +14,7 @@ import { ToolCallStatus } from '../../types.js';
 import type {
   Config,
   ToolCallConfirmationDetails,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { TOOL_STATUS } from '../../constants.js';
 import { ConfigContext } from '../../contexts/ConfigContext.js';
 

@@ -13,7 +13,7 @@ import { isSlashCommand } from '../utils/commandUtils.js';
 import { toCodePoints } from '../utils/textUtils.js';
 import { useAtCompletion } from './useAtCompletion.js';
 import { useSlashCompletion } from './useSlashCompletion.js';
-import type { Config } from '@ai-masters-community/qwen-agents-code-core';
+import type { Config } from '@ai-masters-community/qwen-code-core';
 import { useCompletion } from './useCompletion.js';
 
 export enum CompletionMode {

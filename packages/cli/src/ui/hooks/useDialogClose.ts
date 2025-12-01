@@ -6,7 +6,7 @@
 
 import { useCallback } from 'react';
 import { SettingScope } from '../../config/settings.js';
-import type { AuthType, ApprovalMode } from '@ai-masters-community/qwen-agents-code-core';
+import type { AuthType, ApprovalMode } from '@ai-masters-community/qwen-code-core';
 import type { OpenAICredentials } from '../components/OpenAIKeyPrompt.js';
 
 export interface DialogCloseOptions {

@@ -11,8 +11,8 @@ import { tmpdir } from 'node:os';
 import type {
   ConfigParameters,
   ContentGeneratorConfig,
-} from '@ai-masters-community/qwen-agents-code-core';
-import { Config } from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
+import { Config } from '@ai-masters-community/qwen-code-core';
 import { http, HttpResponse } from 'msw';
 import { setupServer } from 'msw/node';
 
@@ -40,8 +40,8 @@ const TEST_CONTENT_GENERATOR_CONFIG: ContentGeneratorConfig = {
 };
 
 // Mock file discovery service and tool registry
-vi.mock('@ai-masters-community/qwen-agents-code-core', async () => {
-  const actual = await vi.importActual('@ai-masters-community/qwen-agents-code-core');
+vi.mock('@ai-masters-community/qwen-code-core', async () => {
+  const actual = await vi.importActual('@ai-masters-community/qwen-code-core');
   return {
     ...actual,
     FileDiscoveryService: vi.fn().mockImplementation(() => ({

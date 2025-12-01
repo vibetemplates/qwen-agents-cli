@@ -16,7 +16,7 @@ import type { CommandContext } from '../ui/commands/types.js';
 import { createMockCommandContext } from '../test-utils/mockCommandContext.js';
 import * as child_process from 'node:child_process';
 import os from 'node:os';
-import { IdeClient } from '@ai-masters-community/qwen-agents-code-core';
+import { IdeClient } from '@ai-masters-community/qwen-code-core';
 import * as versionUtils from './version.js';
 import type { ExecSyncOptions } from 'node:child_process';
 
@@ -32,9 +32,9 @@ vi.mock('./version.js', () => ({
   getCliVersion: vi.fn(),
 }));
 
-vi.mock('@ai-masters-community/qwen-agents-code-core', async (importOriginal) => {
+vi.mock('@ai-masters-community/qwen-code-core', async (importOriginal) => {
   const actual =
-    await importOriginal<typeof import('@ai-masters-community/qwen-agents-code-core')>();
+    await importOriginal<typeof import('@ai-masters-community/qwen-code-core')>();
   return {
     ...actual,
     IdeClient: {
@@ -269,7 +269,7 @@ describe('systemInfo', () => {
         },
       );
 
-      const { AuthType } = await import('@ai-masters-community/qwen-agents-code-core');
+      const { AuthType } = await import('@ai-masters-community/qwen-code-core');
       // Update the mock context to use OpenAI auth
       mockContext.services.settings.merged.security!.auth!.selectedType =
         AuthType.USE_OPENAI;

@@ -13,11 +13,11 @@ import {
   WriteFileTool,
   DEFAULT_QWEN_MODEL,
   OutputFormat,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { loadCliConfig, parseArguments, type CliArgs } from './config.js';
 import type { Settings } from './settings.js';
 import { ExtensionStorage, type Extension } from './extension.js';
-import * as ServerConfig from '@ai-masters-community/qwen-agents-code-core';
+import * as ServerConfig from '@ai-masters-community/qwen-code-core';
 import { isWorkspaceTrusted } from './trustedFolders.js';
 import { ExtensionEnablementManager } from './extensions/extensionEnablement.js';
 
@@ -77,9 +77,9 @@ vi.mock('read-package-up', () => ({
   ),
 }));
 
-vi.mock('@ai-masters-community/qwen-agents-code-core', async () => {
+vi.mock('@ai-masters-community/qwen-code-core', async () => {
   const actualServer = await vi.importActual<typeof ServerConfig>(
-    '@ai-masters-community/qwen-agents-code-core',
+    '@ai-masters-community/qwen-code-core',
   );
   return {
     ...actualServer,

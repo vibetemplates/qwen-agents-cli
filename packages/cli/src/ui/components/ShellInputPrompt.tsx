@@ -7,7 +7,7 @@
 import { useCallback } from 'react';
 import type React from 'react';
 import { useKeypress } from '../hooks/useKeypress.js';
-import { ShellExecutionService } from '@ai-masters-community/qwen-agents-code-core';
+import { ShellExecutionService } from '@ai-masters-community/qwen-code-core';
 import { keyToAnsi, type Key } from '../hooks/keyToAnsi.js';
 
 export interface ShellInputPromptProps {

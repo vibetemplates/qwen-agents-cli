@@ -8,7 +8,7 @@ import {
   type ApprovalMode,
   APPROVAL_MODES,
   type Config,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { useEffect, useState } from 'react';
 import { useKeypress } from './useKeypress.js';
 import type { HistoryItemWithoutId } from '../types.js';

@@ -166,30 +166,51 @@ describe('OpenRouterOpenAICompatibleProvider', () => {
   });
 
   describe('buildRequest', () => {
-    it('should inherit buildRequest behavior from parent', () => {
+    it('should pass through request for non-Claude models', () => {
       const mockRequest: OpenAI.Chat.ChatCompletionCreateParams = {
         model: 'openai/gpt-4',
         messages: [{ role: 'user', content: 'Hello' }],
+        temperature: 0.7,
+        top_p: 0.9,
       };
       const mockUserPromptId = 'test-prompt-id';
-      const mockResult = { ...mockRequest, modified: true };
-
-      // Mock the parent's buildRequest method
-      const parentBuildRequest = vi.spyOn(
-        DefaultOpenAICompatibleProvider.prototype,
-        'buildRequest',
-      );
-      parentBuildRequest.mockReturnValue(mockResult);
 
       const result = provider.buildRequest(mockRequest, mockUserPromptId);
 
-      expect(parentBuildRequest).toHaveBeenCalledWith(
-        mockRequest,
-        mockUserPromptId,
-      );
-      expect(result).toBe(mockResult);
+      // Non-Claude models should keep both temperature and top_p
+      expect(result.temperature).toBe(0.7);
+      expect(result.top_p).toBe(0.9);
+    });
 
-      parentBuildRequest.mockRestore();
+    it('should remove top_p for Claude models when both temperature and top_p are set', () => {
+      const mockRequest: OpenAI.Chat.ChatCompletionCreateParams = {
+        model: 'anthropic/claude-3.5-sonnet',
+        messages: [{ role: 'user', content: 'Hello' }],
+        temperature: 0.7,
+        top_p: 0.9,
+      };
+      const mockUserPromptId = 'test-prompt-id';
+
+      const result = provider.buildRequest(mockRequest, mockUserPromptId);
+
+      // Claude models should have top_p removed when both are present
+      expect(result.temperature).toBe(0.7);
+      expect(result.top_p).toBeUndefined();
+    });
+
+    it('should keep top_p for Claude models when temperature is not set', () => {
+      const mockRequest: OpenAI.Chat.ChatCompletionCreateParams = {
+        model: 'anthropic/claude-3.5-sonnet',
+        messages: [{ role: 'user', content: 'Hello' }],
+        top_p: 0.9,
+      };
+      const mockUserPromptId = 'test-prompt-id';
+
+      const result = provider.buildRequest(mockRequest, mockUserPromptId);
+
+      // Only top_p is set, so it should be kept
+      expect(result.temperature).toBeUndefined();
+      expect(result.top_p).toBe(0.9);
     });
   });
 

@@ -8,7 +8,7 @@ import { useCallback, useMemo, useEffect, useState } from 'react';
 import { type PartListUnion } from '@google/genai';
 import process from 'node:process';
 import type { UseHistoryManagerReturn } from './useHistoryManager.js';
-import type { Config } from '@ai-masters-community/qwen-agents-code-core';
+import type { Config } from '@ai-masters-community/qwen-code-core';
 import {
   GitService,
   Logger,
@@ -18,7 +18,7 @@ import {
   ToolConfirmationOutcome,
   Storage,
   IdeClient,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { useSessionStats } from '../contexts/SessionContext.js';
 import { formatDuration } from '../utils/formatters.js';
 import type {

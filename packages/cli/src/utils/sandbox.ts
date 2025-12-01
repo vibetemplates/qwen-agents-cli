@@ -16,8 +16,8 @@ import {
   SETTINGS_DIRECTORY_NAME,
 } from '../config/settings.js';
 import { promisify } from 'node:util';
-import type { Config, SandboxConfig } from '@ai-masters-community/qwen-agents-code-core';
-import { FatalSandboxError } from '@ai-masters-community/qwen-agents-code-core';
+import type { Config, SandboxConfig } from '@ai-masters-community/qwen-code-core';
+import { FatalSandboxError } from '@ai-masters-community/qwen-code-core';
 import { ConsolePatcher } from '../ui/utils/ConsolePatcher.js';
 import { randomBytes } from 'node:crypto';
 

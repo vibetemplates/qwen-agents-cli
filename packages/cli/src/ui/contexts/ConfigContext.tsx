@@ -5,7 +5,7 @@
  */
 
 import React, { useContext } from 'react';
-import { type Config } from '@ai-masters-community/qwen-agents-code-core';
+import { type Config } from '@ai-masters-community/qwen-code-core';
 
 export const ConfigContext = React.createContext<Config | undefined>(undefined);
 

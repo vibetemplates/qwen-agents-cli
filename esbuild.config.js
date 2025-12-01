@@ -56,6 +56,7 @@ esbuild
         __dirname,
         'packages/cli/src/patches/is-in-ci.ts',
       ),
+      punycode: require.resolve('punycode/'),
     },
     define: {
       'process.env.CLI_VERSION': JSON.stringify(pkg.version),

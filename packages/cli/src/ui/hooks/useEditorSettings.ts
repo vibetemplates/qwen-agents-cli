@@ -7,11 +7,11 @@
 import { useState, useCallback } from 'react';
 import type { LoadedSettings, SettingScope } from '../../config/settings.js';
 import { type HistoryItem, MessageType } from '../types.js';
-import type { EditorType } from '@ai-masters-community/qwen-agents-code-core';
+import type { EditorType } from '@ai-masters-community/qwen-code-core';
 import {
   allowEditorTypeInSandbox,
   checkHasEditorType,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 
 interface UseEditorSettingsReturn {
   isEditorDialogOpen: boolean;

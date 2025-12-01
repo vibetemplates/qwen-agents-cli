@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import type { Config } from '@ai-masters-community/qwen-agents-code-core';
+import type { Config } from '@ai-masters-community/qwen-code-core';
 import {
   getErrorMessage,
   getMCPServerPrompts,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import type {
   CommandContext,
   SlashCommand,

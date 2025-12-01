@@ -109,8 +109,22 @@ const runtimeDependencies = {};
 if (corePackageJson.dependencies?.tiktoken) {
   runtimeDependencies.tiktoken = corePackageJson.dependencies.tiktoken;
 }
+// punycode is needed at runtime by the punycode-shim for Node.js v22+ compatibility
+// The shim uses require.resolve('punycode/') to redirect deprecated core punycode imports
+if (rootPackageJson.devDependencies?.punycode) {
+  runtimeDependencies.punycode = rootPackageJson.devDependencies.punycode;
+}
 
 // Create a clean package.json for the published package
+// Transform bin paths from "dist/cli.js" to "cli.js" for the published package
+const distBin = {};
+if (rootPackageJson.bin) {
+  for (const [name, binPath] of Object.entries(rootPackageJson.bin)) {
+    // Remove "dist/" prefix since we're publishing from dist/
+    distBin[name] = binPath.replace(/^dist\//, '');
+  }
+}
+
 const distPackageJson = {
   name: rootPackageJson.name,
   version: rootPackageJson.version,
@@ -119,9 +133,7 @@ const distPackageJson = {
   repository: rootPackageJson.repository,
   type: 'module',
   main: 'cli.js',
-  bin: {
-    qwen: 'cli.js',
-  },
+  bin: distBin,
   files: ['cli.js', 'vendor', '*.sb', 'README.md', 'LICENSE', 'locales'],
   config: rootPackageJson.config,
   dependencies: runtimeDependencies,

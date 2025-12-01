@@ -130,6 +130,14 @@ Slash commands provide meta-level control over the CLI itself.
 - **`/auth`**
   - **Description:** Open a dialog that lets you change the authentication method.
 
+- **`/openai-profile`** (alias: **`/openai`**)
+  - **Description:** Save and switch between multiple OpenAI credential profiles (API key, base URL, model) without reopening the auth dialog.
+  - **Usage:**
+    - `/openai-profile save <name> <apiKey> <baseUrl> <model>`
+    - `/openai-profile use <name>`
+    - `/openai-profile list`
+    - `/openai-profile delete <name>`
+
 - **`/approval-mode`**
   - **Description:** Change the approval mode for tool usage.
   - **Usage:** `/approval-mode [mode] [--session|--project|--user]`

@@ -8,7 +8,7 @@ import type {
   MCPServerConfig,
   GeminiCLIExtension,
   ExtensionInstallMetadata,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import {
   QWEN_DIR,
   Storage,
@@ -21,7 +21,7 @@ import {
   logExtensionInstallEvent,
   logExtensionUninstall,
   logExtensionDisable,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import * as os from 'node:os';

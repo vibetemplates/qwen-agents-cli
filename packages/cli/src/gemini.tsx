@@ -4,13 +4,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import type { Config } from '@ai-masters-community/qwen-agents-code-core';
+import type { Config } from '@ai-masters-community/qwen-code-core';
 import {
   AuthType,
   getOauthClient,
   InputFormat,
   logUserPrompt,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { render } from 'ink';
 import { randomUUID } from 'node:crypto';
 import dns from 'node:dns';

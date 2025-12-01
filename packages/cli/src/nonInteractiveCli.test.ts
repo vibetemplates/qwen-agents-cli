@@ -9,7 +9,7 @@ import type {
   ToolRegistry,
   ServerGeminiStreamEvent,
   SessionMetrics,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import type { CLIUserMessage } from './nonInteractive/types.js';
 import {
   executeToolCall,
@@ -20,7 +20,7 @@ import {
   uiTelemetryService,
   FatalInputError,
   ApprovalMode,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import type { Part } from '@google/genai';
 import { runNonInteractive } from './nonInteractiveCli.js';
 import { vi, type Mock, type MockInstance } from 'vitest';
@@ -29,9 +29,9 @@ import { CommandKind } from './ui/commands/types.js';
 
 // Mock core modules
 vi.mock('./ui/hooks/atCommandProcessor.js');
-vi.mock('@ai-masters-community/qwen-agents-code-core', async (importOriginal) => {
+vi.mock('@ai-masters-community/qwen-code-core', async (importOriginal) => {
   const original =
-    await importOriginal<typeof import('@ai-masters-community/qwen-agents-code-core')>();
+    await importOriginal<typeof import('@ai-masters-community/qwen-code-core')>();
 
   class MockChatRecordingService {
     initialize = vi.fn();

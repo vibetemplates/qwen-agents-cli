@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import type { FileSystemService } from '@ai-masters-community/qwen-agents-code-core';
+import type { FileSystemService } from '@ai-masters-community/qwen-code-core';
 import type * as acp from './acp.js';
 
 /**

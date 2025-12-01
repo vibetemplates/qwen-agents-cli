@@ -16,11 +16,11 @@ import {
   loadServerHierarchicalMemory,
   type FileDiscoveryService,
   type LoadServerHierarchicalMemoryResponse,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 
-vi.mock('@ai-masters-community/qwen-agents-code-core', async (importOriginal) => {
+vi.mock('@ai-masters-community/qwen-code-core', async (importOriginal) => {
   const original =
-    await importOriginal<typeof import('@ai-masters-community/qwen-agents-code-core')>();
+    await importOriginal<typeof import('@ai-masters-community/qwen-code-core')>();
   return {
     ...original,
     getErrorMessage: vi.fn((error: unknown) => {

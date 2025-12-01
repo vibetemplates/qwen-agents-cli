@@ -14,7 +14,7 @@ import type {
 } from './types.js';
 import { createMockCommandContext } from '../../test-utils/mockCommandContext.js';
 import type { Content } from '@google/genai';
-import type { GeminiClient } from '@ai-masters-community/qwen-agents-code-core';
+import type { GeminiClient } from '@ai-masters-community/qwen-code-core';
 
 import * as fsPromises from 'node:fs/promises';
 import { chatCommand, serializeHistoryToMarkdown } from './chatCommand.js';

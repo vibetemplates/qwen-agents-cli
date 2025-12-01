@@ -5,7 +5,7 @@
  */
 
 import { useState, useCallback } from 'react';
-import type { ApprovalMode, Config } from '@ai-masters-community/qwen-agents-code-core';
+import type { ApprovalMode, Config } from '@ai-masters-community/qwen-code-core';
 import type { LoadedSettings, SettingScope } from '../../config/settings.js';
 
 interface UseApprovalModeCommandReturn {

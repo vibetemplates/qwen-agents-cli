@@ -21,8 +21,8 @@ import {
 } from './gemini.js';
 import { type LoadedSettings } from './config/settings.js';
 import { appEvents, AppEvent } from './utils/events.js';
-import type { Config } from '@ai-masters-community/qwen-agents-code-core';
-import { OutputFormat } from '@ai-masters-community/qwen-agents-code-core';
+import type { Config } from '@ai-masters-community/qwen-code-core';
+import { OutputFormat } from '@ai-masters-community/qwen-code-core';
 
 // Custom error to identify mock process.exit calls
 class MockProcessExitError extends Error {

@@ -10,7 +10,7 @@ import {
   IdeConnectionType,
   logIdeConnection,
   type Config,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { type LoadedSettings, SettingScope } from '../config/settings.js';
 import { performInitialAuth } from './auth.js';
 import { validateTheme } from './theme.js';

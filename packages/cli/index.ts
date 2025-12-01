@@ -8,7 +8,7 @@
 
 import './src/gemini.js';
 import { main } from './src/gemini.js';
-import { FatalError } from '@ai-masters-community/qwen-agents-code-core';
+import { FatalError } from '@ai-masters-community/qwen-code-core';
 
 // --- Global Entry Point ---
 main().catch((error) => {

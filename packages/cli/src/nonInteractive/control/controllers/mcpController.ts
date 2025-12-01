@@ -22,11 +22,11 @@ import type {
 import type {
   MCPServerConfig,
   WorkspaceContext,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import {
   connectToMcpServer,
   MCP_DEFAULT_TIMEOUT_MSEC,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 
 export class MCPController extends BaseController {
   /**

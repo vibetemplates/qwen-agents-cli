@@ -5,7 +5,7 @@
  */
 
 import { randomUUID } from 'node:crypto';
-import type { Config } from '@ai-masters-community/qwen-agents-code-core';
+import type { Config } from '@ai-masters-community/qwen-code-core';
 import type {
   CLIAssistantMessage,
   CLIMessage,

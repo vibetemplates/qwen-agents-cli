@@ -7,7 +7,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
-import { isNodeError, Storage } from '@ai-masters-community/qwen-agents-code-core';
+import { isNodeError, Storage } from '@ai-masters-community/qwen-code-core';
 
 const MAX_HISTORY_LENGTH = 100;
 

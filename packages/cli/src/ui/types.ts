@@ -11,7 +11,7 @@ import type {
   ToolCallConfirmationDetails,
   ToolConfirmationOutcome,
   ToolResultDisplay,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import type { PartListUnion } from '@google/genai';
 import { type ReactNode } from 'react';
 

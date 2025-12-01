@@ -69,7 +69,7 @@ import {
   SETTINGS_VERSION,
   SETTINGS_VERSION_KEY,
 } from './settings.js';
-import { FatalConfigError, QWEN_DIR } from '@ai-masters-community/qwen-agents-code-core';
+import { FatalConfigError, QWEN_DIR } from '@ai-masters-community/qwen-code-core';
 
 const MOCK_WORKSPACE_DIR = '/mock/workspace';
 // Use the (mocked) SETTINGS_DIRECTORY_NAME for consistency

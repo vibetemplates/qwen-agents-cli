@@ -17,11 +17,11 @@
 import type {
   ToolCallRequestInfo,
   WaitingToolCall,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import {
   InputFormat,
   ToolConfirmationOutcome,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import type {
   CLIControlPermissionRequest,
   CLIControlSetPermissionModeRequest,

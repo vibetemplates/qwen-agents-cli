@@ -7,12 +7,12 @@
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import type { PartListUnion, PartUnion } from '@google/genai';
-import type { AnyToolInvocation, Config } from '@ai-masters-community/qwen-agents-code-core';
+import type { AnyToolInvocation, Config } from '@ai-masters-community/qwen-code-core';
 import {
   getErrorMessage,
   isNodeError,
   unescapePath,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import type { HistoryItem, IndividualToolCallDisplay } from '../types.js';
 import { ToolCallStatus } from '../types.js';
 import type { UseHistoryManagerReturn } from './useHistoryManager.js';

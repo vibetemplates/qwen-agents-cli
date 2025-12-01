@@ -19,7 +19,7 @@ import {
   loadExtensionConfig,
 } from '../extension.js';
 import { checkForExtensionUpdate } from './github.js';
-import type { GeminiCLIExtension } from '@ai-masters-community/qwen-agents-code-core';
+import type { GeminiCLIExtension } from '@ai-masters-community/qwen-code-core';
 import * as fs from 'node:fs';
 import { getErrorMessage } from '../../utils/errors.js';
 

@@ -1,10 +1,10 @@
 {
-  "name": "@ai-masters-community/qwen-agents-code-core",
-  "version": "0.3.1",
+  "name": "@ai-masters-community/qwen-code-core",
+  "version": "0.3.10",
   "description": "Qwen Code Core",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vibetemplates/qwen-agents-cli.git"
+    "url": "git+https://github.com/QwenLM/qwen-code.git"
   },
   "type": "module",
   "main": "dist/index.js",
@@ -20,8 +20,7 @@
   "files": [
     "dist",
     "vendor",
-    "scripts/postinstall.js",
-    "README.md"
+    "scripts/postinstall.js"
   ],
   "dependencies": {
     "@google/genai": "1.16.0",
@@ -77,7 +76,7 @@
     "node-pty": "^1.0.0"
   },
   "devDependencies": {
-    "@ai-masters-community/qwen-agents-code-test-utils": "file:../test-utils",
+    "@ai-masters-community/qwen-code-test-utils": "file:../test-utils",
     "@types/diff": "^7.0.2",
     "@types/dotenv": "^6.1.1",
     "@types/fast-levenshtein": "^0.0.4",

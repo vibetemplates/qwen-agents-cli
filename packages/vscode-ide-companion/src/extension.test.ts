@@ -10,11 +10,11 @@ import { activate } from './extension.js';
 import {
   IDE_DEFINITIONS,
   detectIdeFromEnv,
-} from '@ai-masters-community/qwen-agents-code-core/src/ide/detect-ide.js';
+} from '@ai-masters-community/qwen-code-core/src/ide/detect-ide.js';
 
-vi.mock('@ai-masters-community/qwen-agents-code-core/src/ide/detect-ide.js', async () => {
+vi.mock('@ai-masters-community/qwen-code-core/src/ide/detect-ide.js', async () => {
   const actual = await vi.importActual(
-    '@ai-masters-community/qwen-agents-code-core/src/ide/detect-ide.js',
+    '@ai-masters-community/qwen-code-core/src/ide/detect-ide.js',
   );
   return {
     ...actual,

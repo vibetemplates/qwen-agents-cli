@@ -5,8 +5,8 @@
  */
 
 import { vi, type Mock, type MockInstance } from 'vitest';
-import type { Config } from '@ai-masters-community/qwen-agents-code-core';
-import { OutputFormat, FatalInputError } from '@ai-masters-community/qwen-agents-code-core';
+import type { Config } from '@ai-masters-community/qwen-code-core';
+import { OutputFormat, FatalInputError } from '@ai-masters-community/qwen-code-core';
 import {
   getErrorMessage,
   handleError,
@@ -16,9 +16,9 @@ import {
 } from './errors.js';
 
 // Mock the core modules
-vi.mock('@ai-masters-community/qwen-agents-code-core', async (importOriginal) => {
+vi.mock('@ai-masters-community/qwen-code-core', async (importOriginal) => {
   const original =
-    await importOriginal<typeof import('@ai-masters-community/qwen-agents-code-core')>();
+    await importOriginal<typeof import('@ai-masters-community/qwen-code-core')>();
 
   return {
     ...original,

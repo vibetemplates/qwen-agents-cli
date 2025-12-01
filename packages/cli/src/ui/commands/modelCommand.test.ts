@@ -12,7 +12,7 @@ import {
   AuthType,
   type ContentGeneratorConfig,
   type Config,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import * as availableModelsModule from '../models/availableModels.js';
 
 // Mock the availableModels module

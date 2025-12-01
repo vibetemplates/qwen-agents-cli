@@ -11,7 +11,7 @@ import {
   getShellConfiguration,
   ShellExecutionService,
   flatMapTextParts,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 
 import type { CommandContext } from '../../ui/commands/types.js';
 import type { IPromptProcessor, PromptPipelineContent } from './types.js';

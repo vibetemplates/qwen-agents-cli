@@ -15,8 +15,8 @@ import type {
   Config,
   GeminiClient,
   ShellExecutionResult,
-} from '@ai-masters-community/qwen-agents-code-core';
-import { isBinary, ShellExecutionService } from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
+import { isBinary, ShellExecutionService } from '@ai-masters-community/qwen-code-core';
 import { type PartListUnion } from '@google/genai';
 import type { UseHistoryManagerReturn } from './useHistoryManager.js';
 import { SHELL_COMMAND_NAME } from '../constants.js';

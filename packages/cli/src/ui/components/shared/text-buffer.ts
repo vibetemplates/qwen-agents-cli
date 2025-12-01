@@ -9,7 +9,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import pathMod from 'node:path';
 import { useState, useCallback, useEffect, useMemo, useReducer } from 'react';
-import { unescapePath } from '@ai-masters-community/qwen-agents-code-core';
+import { unescapePath } from '@ai-masters-community/qwen-code-core';
 import {
   toCodePoints,
   cpLen,

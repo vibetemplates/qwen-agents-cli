@@ -13,7 +13,7 @@ import {
   type SlashCommandActionReturn,
 } from './types.js';
 import { CommandKind } from './types.js';
-import { Storage } from '@ai-masters-community/qwen-agents-code-core';
+import { Storage } from '@ai-masters-community/qwen-code-core';
 import { t } from '../../i18n/index.js';
 
 type PresetSource =

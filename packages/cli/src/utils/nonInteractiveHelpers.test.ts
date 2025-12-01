@@ -10,13 +10,13 @@ import type {
   SessionMetrics,
   TaskResultDisplay,
   ToolCallResponseInfo,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import {
   ToolErrorType,
   MCPServerStatus,
   getMCPServerStatus,
   OutputFormat,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import type { Part } from '@google/genai';
 import type {
   CLIUserMessage,
@@ -60,9 +60,9 @@ vi.mock('../ui/utils/computeStats.js', () => ({
   }),
 }));
 
-vi.mock('@ai-masters-community/qwen-agents-code-core', async (importOriginal) => {
+vi.mock('@ai-masters-community/qwen-code-core', async (importOriginal) => {
   const actual =
-    await importOriginal<typeof import('@ai-masters-community/qwen-agents-code-core')>();
+    await importOriginal<typeof import('@ai-masters-community/qwen-code-core')>();
   return {
     ...actual,
     getMCPServerStatus: vi.fn(),

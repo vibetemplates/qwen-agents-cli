@@ -12,7 +12,7 @@ import {
   isGenericQuotaExceededError,
   isProQuotaExceededError,
   UserTierId,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { type UseHistoryManagerReturn } from './useHistoryManager.js';
 import { AuthState, MessageType } from '../types.js';

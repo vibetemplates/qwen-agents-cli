@@ -5,8 +5,8 @@
  */
 
 import { useEffect, useReducer, useRef } from 'react';
-import type { Config, FileSearch } from '@ai-masters-community/qwen-agents-code-core';
-import { FileSearchFactory, escapePath } from '@ai-masters-community/qwen-agents-code-core';
+import type { Config, FileSearch } from '@ai-masters-community/qwen-code-core';
+import { FileSearchFactory, escapePath } from '@ai-masters-community/qwen-code-core';
 import type { Suggestion } from '../components/SuggestionsDisplay.js';
 import { MAX_SUGGESTIONS_TO_SHOW } from '../components/SuggestionsDisplay.js';
 

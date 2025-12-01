@@ -10,12 +10,12 @@ import type {
   TelemetrySettings,
   AuthType,
   ChatCompressionSettings,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import {
   ApprovalMode,
   DEFAULT_TRUNCATE_TOOL_OUTPUT_LINES,
   DEFAULT_TRUNCATE_TOOL_OUTPUT_THRESHOLD,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import type { CustomTheme } from '../ui/themes/theme.js';
 
 export type SettingsType =
@@ -1052,6 +1052,20 @@ const SETTINGS_SCHEMA = {
             default: undefined as string | undefined,
             description: 'Base URL for OpenAI compatible API.',
             showInDialog: false,
+          },
+          openaiProfiles: {
+            type: 'object',
+            label: 'OpenAI Profiles',
+            category: 'Security',
+            requiresRestart: true,
+            default: {} as Record<
+              string,
+              { apiKey: string; baseUrl?: string; model?: string }
+            >,
+            description:
+              'Saved OpenAI credential profiles for quick switching via /openai-profile.',
+            showInDialog: false,
+            mergeStrategy: MergeStrategy.SHALLOW_MERGE,
           },
         },
       },

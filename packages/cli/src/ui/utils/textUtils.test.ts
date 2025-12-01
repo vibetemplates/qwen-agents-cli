@@ -8,7 +8,7 @@ import { describe, it, expect } from 'vitest';
 import type {
   ToolCallConfirmationDetails,
   ToolEditConfirmationDetails,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { escapeAnsiCtrlCodes } from './textUtils.js';
 
 describe('textUtils', () => {

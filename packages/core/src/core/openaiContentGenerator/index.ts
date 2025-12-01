@@ -15,6 +15,7 @@ import {
   DeepSeekOpenAICompatibleProvider,
   ModelScopeOpenAICompatibleProvider,
   OpenRouterOpenAICompatibleProvider,
+  AnthropicOpenAICompatibleProvider,
   type OpenAICompatibleProvider,
   DefaultOpenAICompatibleProvider,
 } from './provider/index.js';
@@ -27,6 +28,7 @@ export {
   DashScopeOpenAICompatibleProvider,
   DeepSeekOpenAICompatibleProvider,
   OpenRouterOpenAICompatibleProvider,
+  AnthropicOpenAICompatibleProvider,
 } from './provider/index.js';
 
 export { OpenAIContentConverter } from './converter.js';
@@ -74,6 +76,14 @@ export function determineProvider(
   // Check for OpenRouter provider
   if (OpenRouterOpenAICompatibleProvider.isOpenRouterProvider(config)) {
     return new OpenRouterOpenAICompatibleProvider(
+      contentGeneratorConfig,
+      cliConfig,
+    );
+  }
+
+  // Check for Anthropic provider
+  if (AnthropicOpenAICompatibleProvider.isAnthropicProvider(config)) {
+    return new AnthropicOpenAICompatibleProvider(
       contentGeneratorConfig,
       cliConfig,
     );

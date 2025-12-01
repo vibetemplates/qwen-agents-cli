@@ -21,8 +21,8 @@ import type { Key } from '../hooks/useKeypress.js';
 import { useKeypress } from '../hooks/useKeypress.js';
 import { keyMatchers, Command } from '../keyMatchers.js';
 import type { CommandContext, SlashCommand } from '../commands/types.js';
-import type { Config } from '@ai-masters-community/qwen-agents-code-core';
-import { ApprovalMode } from '@ai-masters-community/qwen-agents-code-core';
+import type { Config } from '@ai-masters-community/qwen-code-core';
+import { ApprovalMode } from '@ai-masters-community/qwen-code-core';
 import {
   parseInputForHighlighting,
   buildSegmentsForVisualSlice,

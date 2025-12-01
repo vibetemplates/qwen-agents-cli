@@ -20,7 +20,7 @@ import type {
   PlanResultDisplay,
   AnsiOutput,
   Config,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { AgentExecutionDisplay } from '../subagents/index.js';
 import { PlanSummaryDisplay } from '../PlanSummaryDisplay.js';
 import { ShellInputPrompt } from '../ShellInputPrompt.js';

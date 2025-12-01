@@ -11,7 +11,7 @@ import type {
   SlashCommand,
   SlashCommandActionReturn,
 } from './types.js';
-import { getCurrentGeminiMdFilename } from '@ai-masters-community/qwen-agents-code-core';
+import { getCurrentGeminiMdFilename } from '@ai-masters-community/qwen-code-core';
 import { CommandKind } from './types.js';
 import { Text } from 'ink';
 import React from 'react';

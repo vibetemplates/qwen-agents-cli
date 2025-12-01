@@ -16,8 +16,8 @@ import type {
   ToolMcpConfirmationDetails,
   Config,
   EditorType,
-} from '@ai-masters-community/qwen-agents-code-core';
-import { IdeClient, ToolConfirmationOutcome } from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
+import { IdeClient, ToolConfirmationOutcome } from '@ai-masters-community/qwen-code-core';
 import type { RadioSelectItem } from '../shared/RadioButtonSelect.js';
 import { RadioButtonSelect } from '../shared/RadioButtonSelect.js';
 import { MaxSizedBox } from '../shared/MaxSizedBox.js';

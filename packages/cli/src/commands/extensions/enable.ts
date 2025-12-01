@@ -5,7 +5,7 @@
  */
 
 import { type CommandModule } from 'yargs';
-import { FatalConfigError, getErrorMessage } from '@ai-masters-community/qwen-agents-code-core';
+import { FatalConfigError, getErrorMessage } from '@ai-masters-community/qwen-code-core';
 import { enableExtension } from '../../config/extension.js';
 import { SettingScope } from '../../config/settings.js';
 

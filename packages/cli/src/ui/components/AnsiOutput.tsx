@@ -10,7 +10,7 @@ import type {
   AnsiLine,
   AnsiOutput,
   AnsiToken,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 
 const DEFAULT_HEIGHT = 24;
 

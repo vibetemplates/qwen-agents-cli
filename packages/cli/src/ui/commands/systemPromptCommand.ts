@@ -9,7 +9,7 @@ import * as path from 'node:path';
 import * as os from 'node:os';
 import type { SlashCommand, MessageActionReturn } from './types.js';
 import { CommandKind } from './types.js';
-import { getCoreSystemPrompt } from '@ai-masters-community/qwen-agents-code-core';
+import { getCoreSystemPrompt } from '@ai-masters-community/qwen-code-core';
 import { t } from '../../i18n/index.js';
 
 /**
@@ -27,7 +27,7 @@ function resolvePath(filePath: string): string {
  * Gets the current system prompt from the chat session.
  */
 function getCurrentSystemPrompt(
-  config: import('@ai-masters-community/qwen-agents-code-core').Config,
+  config: import('@ai-masters-community/qwen-code-core').Config,
 ): string | undefined {
   try {
     const geminiClient = config.getGeminiClient();

@@ -12,7 +12,7 @@ import {
   getErrorMessage,
   isWithinRoot,
   ideContextStore,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import type { Settings } from './settings.js';
 import stripJsonComments from 'strip-json-comments';
 

@@ -19,8 +19,8 @@ import type {
   ToolCall,
   Status as CoreStatus,
   EditorType,
-} from '@ai-masters-community/qwen-agents-code-core';
-import { CoreToolScheduler } from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
+import { CoreToolScheduler } from '@ai-masters-community/qwen-code-core';
 import { useCallback, useState, useMemo } from 'react';
 import type {
   HistoryItemToolGroup,

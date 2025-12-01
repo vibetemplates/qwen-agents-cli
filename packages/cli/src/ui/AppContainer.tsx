@@ -39,7 +39,7 @@ import {
   getErrorMessage,
   getAllGeminiMdFilenames,
   ShellExecutionService,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { validateAuthMethod } from '../config/auth.js';
 import { loadHierarchicalGeminiMemory } from '../config/config.js';
 import process from 'node:process';

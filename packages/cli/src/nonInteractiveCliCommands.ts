@@ -11,7 +11,7 @@ import {
   Logger,
   uiTelemetryService,
   type Config,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { CommandService } from './services/CommandService.js';
 import { BuiltinCommandLoader } from './services/BuiltinCommandLoader.js';
 import { FileCommandLoader } from './services/FileCommandLoader.js';

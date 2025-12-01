@@ -7,7 +7,7 @@
 import { Box, Text } from 'ink';
 import { theme } from '../../../semantic-colors.js';
 import { shouldShowColor, getColorForDisplay } from '../utils.js';
-import { type SubagentConfig } from '@ai-masters-community/qwen-agents-code-core';
+import { type SubagentConfig } from '@ai-masters-community/qwen-code-core';
 import { t } from '../../../../i18n/index.js';
 
 interface AgentViewerStepProps {

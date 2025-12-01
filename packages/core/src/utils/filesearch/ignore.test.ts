@@ -6,7 +6,7 @@
 
 import { describe, it, expect, afterEach } from 'vitest';
 import { Ignore, loadIgnoreRules } from './ignore.js';
-import { createTmpDir, cleanupTmpDir } from '@ai-masters-community/qwen-agents-code-test-utils';
+import { createTmpDir, cleanupTmpDir } from '@ai-masters-community/qwen-code-test-utils';
 
 describe('Ignore', () => {
   describe('getDirectoryFilter', () => {

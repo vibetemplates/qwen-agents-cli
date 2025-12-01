@@ -12,12 +12,12 @@ import type {
   ToolCallRequestInfo,
   ToolCallResponseInfo,
   SessionMetrics,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import {
   OutputFormat,
   ToolErrorType,
   getMCPServerStatus,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import type { Part, PartListUnion } from '@google/genai';
 import type {
   CLIUserMessage,

@@ -7,7 +7,7 @@
 // File for 'gemini mcp add' command
 import type { CommandModule } from 'yargs';
 import { loadSettings, SettingScope } from '../../config/settings.js';
-import type { MCPServerConfig } from '@ai-masters-community/qwen-agents-code-core';
+import type { MCPServerConfig } from '@ai-masters-community/qwen-code-core';
 
 async function addMcpServer(
   name: string,

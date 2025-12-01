@@ -7,7 +7,7 @@
 import type {
   FileFilteringOptions,
   MCPServerConfig,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { extensionsCommand } from '../commands/extensions.js';
 import {
   ApprovalMode,
@@ -26,7 +26,7 @@ import {
   Storage,
   InputFormat,
   OutputFormat,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import type { Settings } from './settings.js';
 import yargs, { type Argv } from 'yargs';
 import { hideBin } from 'yargs/helpers';

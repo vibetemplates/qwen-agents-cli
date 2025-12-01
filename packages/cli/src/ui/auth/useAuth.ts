@@ -4,14 +4,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import type { Config } from '@ai-masters-community/qwen-agents-code-core';
+import type { Config } from '@ai-masters-community/qwen-code-core';
 import {
   AuthEvent,
   AuthType,
   clearCachedCredentialFile,
   getErrorMessage,
   logAuth,
-} from '@ai-masters-community/qwen-agents-code-core';
+} from '@ai-masters-community/qwen-code-core';
 import { useCallback, useEffect, useState } from 'react';
 import type { LoadedSettings, SettingScope } from '../../config/settings.js';
 import type { OpenAICredentials } from '../components/OpenAIKeyPrompt.js';
