@@ -148,9 +148,17 @@ describe('useSlashCommandProcessor', () => {
           openEditorDialog: vi.fn(),
           openSettingsDialog: vi.fn(),
           openModelDialog: mockOpenModelDialog,
+          openPermissionsDialog: vi.fn(),
+          openApprovalModeDialog: vi.fn(),
           quit: mockSetQuittingMessages,
           setDebugMessage: vi.fn(),
           toggleCorgiMode: vi.fn(),
+          dispatchExtensionStateUpdate: vi.fn(),
+          addConfirmUpdateExtensionRequest: vi.fn(),
+          openSubagentCreateDialog: vi.fn(),
+          openAgentsManagerDialog: vi.fn(),
+          setSystemPromptPreset: vi.fn(),
+          _showQuitConfirmation: vi.fn(),
         },
       ),
     );
@@ -898,20 +906,29 @@ describe('useSlashCommandProcessor', () => {
           mockClearItems,
           mockLoadHistory,
           vi.fn(), // refreshStatic
-          vi.fn(), // onDebugMessage
-          vi.fn(), // openThemeDialog
-          mockOpenAuthDialog,
-          vi.fn(), // openEditorDialog
-          vi.fn(), // toggleCorgiMode
-          mockSetQuittingMessages,
-          vi.fn(), // openSettingsDialog
-          vi.fn(), // openModelSelectionDialog
-          vi.fn(), // openSubagentCreateDialog
-          vi.fn(), // openAgentsManagerDialog
           vi.fn(), // toggleVimEnabled
           vi.fn(), // setIsProcessing
           vi.fn(), // setGeminiMdFileCount
-          vi.fn(), // _showQuitConfirmation
+          {
+            openAuthDialog: mockOpenAuthDialog,
+            openThemeDialog: vi.fn(),
+            openEditorDialog: vi.fn(),
+            openSettingsDialog: vi.fn(),
+            openModelDialog: vi.fn(),
+            openPermissionsDialog: vi.fn(),
+            openApprovalModeDialog: vi.fn(),
+            quit: mockSetQuittingMessages,
+            setDebugMessage: vi.fn(),
+            toggleCorgiMode: vi.fn(),
+            dispatchExtensionStateUpdate: vi.fn(),
+            addConfirmUpdateExtensionRequest: vi.fn(),
+            openSubagentCreateDialog: vi.fn(),
+            openAgentsManagerDialog: vi.fn(),
+            setSystemPromptPreset: vi.fn(),
+            _showQuitConfirmation: vi.fn(),
+          },
+          new Map(),
+          false,
         ),
       );
 

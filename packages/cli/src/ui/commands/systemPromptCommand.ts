@@ -123,6 +123,7 @@ export const systemPromptCommand: SlashCommand = {
           }
 
           await geminiClient.resetChatWithSystemInstruction(args.trim());
+          context.ui.setSystemPromptPreset?.(null);
 
           return {
             type: 'message',
@@ -178,6 +179,7 @@ export const systemPromptCommand: SlashCommand = {
           const newPrompt = currentPrompt + '\n\n' + args.trim();
 
           await geminiClient.resetChatWithSystemInstruction(newPrompt);
+          context.ui.setSystemPromptPreset?.(null);
 
           return {
             type: 'message',
@@ -242,6 +244,7 @@ export const systemPromptCommand: SlashCommand = {
           }
 
           await geminiClient.resetChatWithSystemInstruction(fileContent);
+          context.ui.setSystemPromptPreset?.(null);
 
           return {
             type: 'message',
@@ -309,6 +312,7 @@ export const systemPromptCommand: SlashCommand = {
           );
 
           await geminiClient.resetChatWithSystemInstruction(defaultPrompt);
+          context.ui.setSystemPromptPreset?.(null);
 
           return {
             type: 'message',

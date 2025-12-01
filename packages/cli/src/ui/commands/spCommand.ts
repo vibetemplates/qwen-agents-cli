@@ -340,6 +340,7 @@ async function usePreset(
 
     // Recreate chat with the new system prompt while preserving history/tools.
     await geminiClient.resetChatWithSystemInstruction(effectivePrompt);
+    context.ui.setSystemPromptPreset?.(parsed.name);
     context.ui.addItem(
       {
         type: 'info',

@@ -51,6 +51,7 @@ const createMockUIState = (overrides: Partial<UIState> = {}): UIState =>
     sessionStats: {
       lastPromptTokenCount: 100,
     },
+    systemPromptPreset: null,
     branchName: defaultProps.branchName,
     ...overrides,
   }) as UIState;
@@ -145,6 +146,15 @@ describe('<Footer />', () => {
     const { lastFrame } = renderWithWidth(99, createMockUIState());
     expect(lastFrame()).toContain(defaultProps.model);
     expect(lastFrame()).toMatch(/\(\d+%\)/);
+  });
+
+  it('shows the active /sp preset label when present', () => {
+    const { lastFrame } = renderWithWidth(
+      120,
+      createMockUIState({ systemPromptPreset: 'guardian' }),
+    );
+    expect(lastFrame()).toContain('sp (guardian) ·');
+    expect(lastFrame()).toContain(defaultProps.model);
   });
 
   describe('sandbox and trust info', () => {

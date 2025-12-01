@@ -39,6 +39,7 @@ export const Footer: React.FC = () => {
     promptTokenCount,
     nightly,
     isTrustedFolder,
+    systemPromptPreset,
   } = {
     model: config.getModel(),
     targetDir: config.getTargetDir(),
@@ -51,6 +52,7 @@ export const Footer: React.FC = () => {
     promptTokenCount: uiState.sessionStats.lastPromptTokenCount,
     nightly: uiState.nightly,
     isTrustedFolder: uiState.isTrustedFolder,
+    systemPromptPreset: uiState.systemPromptPreset,
   };
 
   const showMemoryUsage =
@@ -142,14 +144,22 @@ export const Footer: React.FC = () => {
       {!hideModelInfo && (
         <Box alignItems="center" justifyContent="flex-end">
           <Box alignItems="center">
-            <Text color={theme.text.accent}>
-              {model}{' '}
-              <ContextUsageDisplay
-                promptTokenCount={promptTokenCount}
-                model={model}
-                terminalWidth={terminalWidth}
-              />
-            </Text>
+            <Box flexDirection="row" alignItems="center">
+              {systemPromptPreset && (
+                <Text color={theme.text.secondary}>
+                  sp ({systemPromptPreset})
+                  <Text color={theme.ui.symbol}> · </Text>
+                </Text>
+              )}
+              <Text color={theme.text.accent}>
+                {model}{' '}
+                <ContextUsageDisplay
+                  promptTokenCount={promptTokenCount}
+                  model={model}
+                  terminalWidth={terminalWidth}
+                />
+              </Text>
+            </Box>
             {showMemoryUsage && <MemoryUsageDisplay />}
           </Box>
           <Box alignItems="center" paddingLeft={2}>

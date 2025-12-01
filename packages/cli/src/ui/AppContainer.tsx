@@ -158,6 +158,9 @@ export const AppContainer = (props: AppContainerProps) => {
   const [isTrustedFolder, setIsTrustedFolder] = useState<boolean | undefined>(
     config.isTrustedFolder(),
   );
+  const [systemPromptPreset, setSystemPromptPreset] = useState<string | null>(
+    null,
+  );
 
   const extensions = config.getExtensions();
   const {
@@ -477,6 +480,7 @@ export const AppContainer = (props: AppContainerProps) => {
       },
       setDebugMessage,
       toggleCorgiMode: () => setCorgiMode((prev) => !prev),
+      setSystemPromptPreset,
       dispatchExtensionStateUpdate,
       addConfirmUpdateExtensionRequest,
       openSubagentCreateDialog,
@@ -491,6 +495,7 @@ export const AppContainer = (props: AppContainerProps) => {
       openModelDialog,
       setDebugMessage,
       setCorgiMode,
+      setSystemPromptPreset,
       dispatchExtensionStateUpdate,
       openPermissionsDialog,
       openApprovalModeDialog,
@@ -1264,6 +1269,7 @@ export const AppContainer = (props: AppContainerProps) => {
       showWorkspaceMigrationDialog,
       workspaceExtensions,
       currentModel,
+      systemPromptPreset,
       userTier,
       proQuotaRequest,
       contextFileNames,
@@ -1377,6 +1383,7 @@ export const AppContainer = (props: AppContainerProps) => {
       ideTrustRestartReason,
       isRestarting,
       currentModel,
+      systemPromptPreset,
       extensionsUpdateState,
       activePtyId,
       historyManager,

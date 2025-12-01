@@ -56,6 +56,7 @@ interface SlashCommandProcessorActions {
   addConfirmUpdateExtensionRequest: (request: ConfirmationRequest) => void;
   openSubagentCreateDialog: () => void;
   openAgentsManagerDialog: () => void;
+  setSystemPromptPreset: (preset: string | null) => void;
   _showQuitConfirmation: () => void;
 }
 
@@ -211,6 +212,7 @@ export const useSlashCommandProcessor = (
         toggleCorgiMode: actions.toggleCorgiMode,
         toggleVimEnabled,
         setGeminiMdFileCount,
+        setSystemPromptPreset: actions.setSystemPromptPreset,
         reloadCommands,
         extensionsUpdateState,
         dispatchExtensionStateUpdate: actions.dispatchExtensionStateUpdate,
