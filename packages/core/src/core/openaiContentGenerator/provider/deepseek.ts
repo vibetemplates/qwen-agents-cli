@@ -35,8 +35,34 @@ export class DeepSeekOpenAICompatibleProvider extends DefaultOpenAICompatiblePro
     }
 
     const messages = baseRequest.messages.map((message) => {
+      // Ensure assistant messages include reasoning_content for DeepSeek reasoning models.
+      const ensureReasoningContent = (
+        updatedMessage: OpenAI.Chat.ChatCompletionMessageParam,
+      ): OpenAI.Chat.ChatCompletionMessageParam => {
+        if (updatedMessage.role !== 'assistant') {
+          return updatedMessage;
+        }
+
+        const reasoningContent =
+          (updatedMessage as { reasoning_content?: string }).reasoning_content;
+
+        if (reasoningContent !== undefined) {
+          return updatedMessage;
+        }
+
+        const contentString =
+          typeof updatedMessage.content === 'string'
+            ? updatedMessage.content
+            : null;
+
+        return {
+          ...updatedMessage,
+          reasoning_content: contentString ?? '',
+        } as OpenAI.Chat.ChatCompletionMessageParam;
+      };
+
       if (!('content' in message)) {
-        return message;
+        return ensureReasoningContent(message);
       }
 
       const { content } = message;
@@ -46,7 +72,7 @@ export class DeepSeekOpenAICompatibleProvider extends DefaultOpenAICompatiblePro
         content === null ||
         content === undefined
       ) {
-        return message;
+        return ensureReasoningContent(message);
       }
 
       if (!Array.isArray(content)) {
@@ -65,10 +91,12 @@ export class DeepSeekOpenAICompatibleProvider extends DefaultOpenAICompatiblePro
         })
         .join('');
 
-      return {
+      const updatedMessage = {
         ...message,
         content: text,
       } as OpenAI.Chat.ChatCompletionMessageParam;
+
+      return ensureReasoningContent(updatedMessage);
     });
 
     return {
