@@ -107,6 +107,73 @@ describe('DeepSeekOpenAICompatibleProvider', () => {
       expect(result.messages?.[0].content).toBe('Hello world');
     });
 
+    it('adds reasoning_content to assistant messages that lack it (string content)', () => {
+      const originalRequest: OpenAI.Chat.ChatCompletionCreateParams = {
+        model: 'deepseek-chat',
+        messages: [
+          {
+            role: 'assistant',
+            content: 'Prior answer',
+          },
+        ],
+      };
+
+      const result = provider.buildRequest(originalRequest, userPromptId);
+
+      expect(
+        (result.messages?.[0] as { reasoning_content?: string })
+          .reasoning_content,
+      ).toBe('Prior answer');
+    });
+
+    it('adds reasoning_content to assistant messages converted from parts', () => {
+      const originalRequest: OpenAI.Chat.ChatCompletionCreateParams = {
+        model: 'deepseek-chat',
+        messages: [
+          {
+            role: 'assistant',
+            content: [
+              { type: 'text', text: 'Thinking...' },
+              { type: 'text', text: ' Final answer.' },
+            ],
+          },
+        ],
+      };
+
+      const result = provider.buildRequest(originalRequest, userPromptId);
+
+      const message = result.messages?.[0] as {
+        content?: string;
+        reasoning_content?: string;
+      };
+
+      expect(message.content).toBe('Thinking... Final answer.');
+      expect(message.reasoning_content).toBe('Thinking... Final answer.');
+    });
+
+    it('preserves existing reasoning_content on assistant messages', () => {
+      const originalRequest: OpenAI.Chat.ChatCompletionCreateParams = {
+        model: 'deepseek-chat',
+        messages: [
+          {
+            role: 'assistant',
+            content: 'Short answer',
+            reasoning_content: 'Detailed reasoning',
+          } as unknown as OpenAI.Chat.ChatCompletionMessageParam,
+        ],
+      };
+
+      const result = provider.buildRequest(originalRequest, userPromptId);
+
+      const message = result.messages?.[0] as {
+        content?: string;
+        reasoning_content?: string;
+      };
+
+      expect(message.content).toBe('Short answer');
+      expect(message.reasoning_content).toBe('Detailed reasoning');
+    });
+
     it('throws when encountering non-text multimodal parts', () => {
       const originalRequest: OpenAI.Chat.ChatCompletionCreateParams = {
         model: 'deepseek-chat',
