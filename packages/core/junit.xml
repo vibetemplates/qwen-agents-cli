@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="43" failures="0" errors="0" time="0.022618751">
+    <testsuite name="src/core/openaiContentGenerator/pipeline.test.ts" timestamp="2025-11-30T23:39:41.176Z" hostname="MacBook-Pro-6.local" tests="19" failures="0" errors="0" skipped="0" time="0.01403825">
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; constructor &gt; should initialize with correct configuration" time="0.001921333">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; execute &gt; should successfully execute non-streaming request" time="0.002023334">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; execute &gt; should handle tools in request" time="0.000427792">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; execute &gt; should handle errors and log them" time="0.001344417">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; execute &gt; should pass abort signal to OpenAI client when provided" time="0.000425209">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; executeStream &gt; should successfully execute streaming request" time="0.000999875">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; executeStream &gt; should filter empty responses" time="0.000387792">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; executeStream &gt; should handle streaming errors and reset tool calls" time="0.000577792">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; executeStream &gt; should pass abort signal to OpenAI client for streaming requests" time="0.000375959">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; executeStream &gt; should merge finishReason and usageMetadata from separate chunks" time="0.000712667">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; executeStream &gt; should handle ideal case where last chunk has both finishReason and usageMetadata" time="0.00044225">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; executeStream &gt; should handle providers that send zero usage in finish chunk (like modelscope)" time="0.000689084">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; executeStream &gt; should handle providers that send finishReason and valid usage in same chunk" time="0.000587041">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; buildRequest &gt; should build request with sampling parameters" time="0.0004005">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; buildRequest &gt; should use config sampling parameters when request parameters are not provided" time="0.000295292">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; buildRequest &gt; should allow provider to enhance request" time="0.000361708">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; createRequestContext &gt; should create context with correct properties for non-streaming request" time="0.0003145">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; createRequestContext &gt; should create context with correct properties for streaming request" time="0.00034075">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/pipeline.test.ts" name="ContentGenerationPipeline &gt; createRequestContext &gt; should collect all OpenAI chunks for logging even when Gemini responses are filtered" time="0.000530583">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/core/openaiContentGenerator/provider/anthropic.test.ts" timestamp="2025-11-30T23:39:41.177Z" hostname="MacBook-Pro-6.local" tests="10" failures="0" errors="0" skipped="0" time="0.003993542">
+        <testcase classname="src/core/openaiContentGenerator/provider/anthropic.test.ts" name="AnthropicOpenAICompatibleProvider &gt; constructor &gt; should extend DefaultOpenAICompatibleProvider" time="0.001377833">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/anthropic.test.ts" name="AnthropicOpenAICompatibleProvider &gt; isAnthropicProvider &gt; should return true for anthropic.com URLs" time="0.000253875">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/anthropic.test.ts" name="AnthropicOpenAICompatibleProvider &gt; isAnthropicProvider &gt; should return false for non-anthropic URLs" time="0.000177583">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/anthropic.test.ts" name="AnthropicOpenAICompatibleProvider &gt; isClaudeModel &gt; should return true for Claude models" time="0.000203375">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/anthropic.test.ts" name="AnthropicOpenAICompatibleProvider &gt; isClaudeModel &gt; should return false for non-Claude models" time="0.000245584">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/anthropic.test.ts" name="AnthropicOpenAICompatibleProvider &gt; buildRequest &gt; should remove top_p when both temperature and top_p are set" time="0.000148459">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/anthropic.test.ts" name="AnthropicOpenAICompatibleProvider &gt; buildRequest &gt; should keep temperature when only temperature is set" time="0.000094584">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/anthropic.test.ts" name="AnthropicOpenAICompatibleProvider &gt; buildRequest &gt; should keep top_p when only top_p is set" time="0.000109791">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/anthropic.test.ts" name="AnthropicOpenAICompatibleProvider &gt; buildRequest &gt; should pass through request when neither is set" time="0.000105167">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/anthropic.test.ts" name="AnthropicOpenAICompatibleProvider &gt; buildRequest &gt; should preserve other request parameters" time="0.00046325">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/core/openaiContentGenerator/provider/openrouter.test.ts" timestamp="2025-11-30T23:39:41.178Z" hostname="MacBook-Pro-6.local" tests="14" failures="0" errors="0" skipped="0" time="0.004586959">
+        <testcase classname="src/core/openaiContentGenerator/provider/openrouter.test.ts" name="OpenRouterOpenAICompatibleProvider &gt; constructor &gt; should extend DefaultOpenAICompatibleProvider" time="0.001288459">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/openrouter.test.ts" name="OpenRouterOpenAICompatibleProvider &gt; isOpenRouterProvider &gt; should return true for openrouter.ai URLs" time="0.000233958">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/openrouter.test.ts" name="OpenRouterOpenAICompatibleProvider &gt; isOpenRouterProvider &gt; should return false for non-openrouter URLs" time="0.000145208">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/openrouter.test.ts" name="OpenRouterOpenAICompatibleProvider &gt; isOpenRouterProvider &gt; should handle missing baseUrl gracefully" time="0.000068833">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/openrouter.test.ts" name="OpenRouterOpenAICompatibleProvider &gt; buildHeaders &gt; should include base headers from parent class" time="0.000178292">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/openrouter.test.ts" name="OpenRouterOpenAICompatibleProvider &gt; buildHeaders &gt; should add OpenRouter-specific headers" time="0.000390333">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/openrouter.test.ts" name="OpenRouterOpenAICompatibleProvider &gt; buildHeaders &gt; should override parent headers if there are conflicts" time="0.000210875">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/openrouter.test.ts" name="OpenRouterOpenAICompatibleProvider &gt; buildHeaders &gt; should handle unknown CLI version from parent" time="0.000117875">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/openrouter.test.ts" name="OpenRouterOpenAICompatibleProvider &gt; buildClient &gt; should inherit buildClient behavior from parent" time="0.000218667">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/openrouter.test.ts" name="OpenRouterOpenAICompatibleProvider &gt; buildRequest &gt; should pass through request for non-Claude models" time="0.0001695">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/openrouter.test.ts" name="OpenRouterOpenAICompatibleProvider &gt; buildRequest &gt; should remove top_p for Claude models when both temperature and top_p are set" time="0.000106459">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/openrouter.test.ts" name="OpenRouterOpenAICompatibleProvider &gt; buildRequest &gt; should keep top_p for Claude models when temperature is not set" time="0.000084125">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/openrouter.test.ts" name="OpenRouterOpenAICompatibleProvider &gt; integration with parent class &gt; should properly call parent constructor" time="0.000384667">
+        </testcase>
+        <testcase classname="src/core/openaiContentGenerator/provider/openrouter.test.ts" name="OpenRouterOpenAICompatibleProvider &gt; integration with parent class &gt; should maintain parent functionality while adding OpenRouter specifics" time="0.000113">
+        </testcase>
+    </testsuite>
+</testsuites>

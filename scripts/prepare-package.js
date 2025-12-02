@@ -111,8 +111,8 @@ if (corePackageJson.dependencies?.tiktoken) {
 }
 // punycode is needed at runtime by the punycode-shim for Node.js v22+ compatibility
 // The shim uses require.resolve('punycode/') to redirect deprecated core punycode imports
-if (rootPackageJson.devDependencies?.punycode) {
-  runtimeDependencies.punycode = rootPackageJson.devDependencies.punycode;
+if (rootPackageJson.dependencies?.punycode) {
+  runtimeDependencies.punycode = rootPackageJson.dependencies.punycode;
 }
 
 // Create a clean package.json for the published package
