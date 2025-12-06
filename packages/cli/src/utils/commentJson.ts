@@ -38,6 +38,14 @@ export function updateSettingsFilePreservingFormat(
   fs.writeFileSync(filePath, updatedContent, 'utf-8');
 }
 
+function isPlainObject(value: unknown): value is Record<string, unknown> {
+  return (
+    typeof value === 'object' && value !== null && !Array.isArray(value)
+  );
+}
+
+// Apply updates by replacing objects instead of shallow-merging so removals
+// (e.g., deleting a saved profile) are persisted.
 function applyUpdates(
   current: Record<string, unknown>,
   updates: Record<string, unknown>,
@@ -46,18 +54,17 @@ function applyUpdates(
 
   for (const key of Object.getOwnPropertyNames(updates)) {
     const value = updates[key];
-    if (
-      typeof value === 'object' &&
-      value !== null &&
-      !Array.isArray(value) &&
-      typeof result[key] === 'object' &&
-      result[key] !== null &&
-      !Array.isArray(result[key])
-    ) {
-      result[key] = applyUpdates(
-        result[key] as Record<string, unknown>,
-        value as Record<string, unknown>,
-      );
+    if (isPlainObject(value)) {
+      const target = isPlainObject(result[key]) ? result[key] : {};
+
+      // Drop keys that no longer exist to avoid lingering entries (e.g., deleted profiles)
+      for (const existingKey of Object.getOwnPropertyNames(target)) {
+        if (!Object.hasOwn(value, existingKey)) {
+          delete target[existingKey];
+        }
+      }
+
+      result[key] = applyUpdates(target as Record<string, unknown>, value);
     } else {
       result[key] = value;
     }
