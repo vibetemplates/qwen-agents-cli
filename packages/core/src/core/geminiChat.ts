@@ -599,13 +599,33 @@ export class GeminiChat {
     // - Empty response text (e.g., only thoughts with no actual content)
     if (!hasToolCall && (!hasFinishReason || !responseText)) {
       if (!hasFinishReason) {
+        const debugInfo = JSON.stringify({
+          hasToolCall,
+          hasFinishReason,
+          partsCount: consolidatedParts.length,
+          parts: consolidatedParts,
+        });
+        const truncatedDebugInfo =
+          debugInfo.length > 500
+            ? debugInfo.substring(0, 500) + '... (truncated)'
+            : debugInfo;
         throw new InvalidStreamError(
-          'Model stream ended without a finish reason.',
+          `Model stream ended without a finish reason. Debug info: ${truncatedDebugInfo}`,
           'NO_FINISH_REASON',
         );
       } else {
+        const debugInfo = JSON.stringify({
+          hasToolCall,
+          hasFinishReason,
+          partsCount: consolidatedParts.length,
+          parts: consolidatedParts,
+        });
+        const truncatedDebugInfo =
+          debugInfo.length > 500
+            ? debugInfo.substring(0, 500) + '... (truncated)'
+            : debugInfo;
         throw new InvalidStreamError(
-          'Model stream ended with empty response text.',
+          `Model stream ended with empty response text. Debug info: ${truncatedDebugInfo}`,
           'NO_RESPONSE_TEXT',
         );
       }
